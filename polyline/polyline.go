@@ -76,7 +76,7 @@ func Decode(s string, dim int) ([]float64, error) {
 	}
 	ys := make([]float64, len(xs))
 	for j, i := range xs {
-		ys[j] = float64(i) / 1e5
+		ys[j] = float64(i) / 1e6
 		if j >= dim {
 			ys[j] += ys[j-dim]
 		}
